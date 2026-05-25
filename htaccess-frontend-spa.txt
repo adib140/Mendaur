@@ -1,0 +1,27 @@
+# .htaccess untuk Frontend SPA
+# Upload ke /public_html/.htaccess (BUKAN di folder /api)
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Jangan rewrite file/folder yang ada secara fisik
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Jangan rewrite folder /api (biarkan Laravel handle)
+    RewriteCond %{REQUEST_URI} !^/api
+
+    # Arahkan semua route lain ke index.html (untuk SPA)
+    RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

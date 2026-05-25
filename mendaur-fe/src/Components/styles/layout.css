@@ -1,0 +1,49 @@
+/* Container utama */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Flex utilities */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid responsif */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Text utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}

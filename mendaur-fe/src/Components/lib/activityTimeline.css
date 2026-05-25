@@ -1,0 +1,221 @@
+.activityTimeline {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.timelineFilter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.timelineFilter button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+.timelineFilter button.active {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.timelineList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  /* Batasi tinggi untuk 5 item dan aktifkan scroll */
+  max-height: 360px; /* Sesuaikan tinggi per item jika perlu */
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Scrollbar styling (opsional) */
+.timelineList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timelineList::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-light);
+  border-radius: 4px;
+}
+
+.timelineList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.timelineIcon {
+  background-color: var(--color-primary-light);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.timelineContent {
+  flex: 1;
+}
+
+.timelineDesc {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timelineDetail {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .activityTimeline {
+    margin-top: 2rem;
+  }
+
+  .timelineList {
+    max-height: 400px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .activityTimeline {
+    margin-top: 1.5rem;
+  }
+
+  .timelineList {
+    max-height: 340px;
+  }
+
+  .timelineFilter button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .activityTimeline {
+    margin-top: 1.25rem;
+  }
+
+  .timelineFilter {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .timelineFilter button {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+
+  .timelineList {
+    max-height: 300px;
+  }
+
+  .timelineItem {
+    gap: 10px;
+    margin-bottom: 0.875rem;
+  }
+
+  .timelineIcon {
+    padding: 6px;
+  }
+
+  .timelineDesc {
+    font-size: 0.95rem;
+  }
+
+  .timelineDetail {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .activityTimeline {
+    margin-top: 1rem;
+  }
+
+  .timelineFilter {
+    gap: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .timelineFilter button {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+  }
+
+  .timelineList {
+    max-height: 280px;
+  }
+
+  .timelineItem {
+    gap: 8px;
+    margin-bottom: 0.75rem;
+  }
+
+  .timelineIcon {
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timelineIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .timelineDesc {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+  }
+
+  .timelineDetail {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .timelineFilter button {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+
+  .timelineItem {
+    gap: 6px;
+  }
+
+  .timelineIcon {
+    padding: 4px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .timelineDesc {
+    font-size: 0.8rem;
+  }
+
+  .timelineDetail {
+    font-size: 0.7rem;
+  }
+}

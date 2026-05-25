@@ -1,0 +1,296 @@
+/* Dashboard Container */
+.point-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 1.5rem;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Navigation Tabs */
+.dashboard-tabs {
+  background: white;
+  border-bottom: 2px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tabs-scroll {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* Hide scrollbar but allow scrolling */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+  color: #667eea;
+  background: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-label {
+  font-weight: 600;
+}
+
+/* Tab Content Container */
+.tab-content-container {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Dashboard Footer */
+.dashboard-footer {
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+  border-top: 2px solid #e0e0e0;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-info {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tab-label {
+    display: none;
+  }
+
+  .tab-button.active .tab-label,
+  .tab-button:hover .tab-label {
+    display: inline;
+  }
+
+  .tab-content-container {
+    padding: 1rem;
+  }
+
+  .dashboard-footer {
+    padding: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .tab-button {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .tab-content-container {
+    padding: 0.75rem;
+  }
+
+  .dashboard-footer {
+    padding: 0.75rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .footer-info {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .tab-button {
+    padding: 0.5rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tab-content-container {
+    padding: 0.5rem;
+  }
+
+  .dashboard-footer {
+    padding: 0.5rem;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  .point-dashboard-container {
+    background: #1a1a1a;
+  }
+
+  .dashboard-tabs {
+    background: #2a2a2a;
+    border-bottom-color: #444;
+  }
+
+  .tab-button {
+    color: #aaa;
+  }
+
+  .tab-button:hover {
+    color: #667eea;
+    background: #333;
+  }
+
+  .tab-button.active {
+    color: #667eea;
+  }
+
+  .dashboard-footer {
+    background: linear-gradient(135deg, #2a2a2a 0%, #242424 100%);
+    border-top-color: #444;
+  }
+
+  .footer-text {
+    color: #ccc;
+  }
+
+  .footer-info {
+    color: #777;
+  }
+}

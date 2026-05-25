@@ -1,0 +1,233 @@
+.bannerCard {
+  position: relative;
+  overflow: hidden;
+  background: #123524;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 1;
+  padding: 32px;
+  color: #ffffff;
+}
+
+.bannerBadge {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--font-color-accent);
+  font-size: var(--font-desc);
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.bannerTitle {
+  font-size: var(--font-title);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.bannerText {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+
+.bannerActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .bannerActions {
+    flex-direction: row;
+  }
+}
+
+.bannerBtnPrimary {
+  background-color: #facc15;
+  color: var(--font-color-accent);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.bannerBtnPrimary:hover {
+  background-color: #eab308;
+}
+
+.bannerBtnSecondary {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.bannerBtnSecondary:hover {
+  background-color: #ffffff;
+  color: #047857;
+}
+
+.arrowIcon {
+  font-size: 1rem;
+}
+
+/* Responsive */
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .bannerContent {
+    padding: 40px;
+  }
+
+  .bannerTitle {
+    font-size: 2rem;
+  }
+
+  .bannerText {
+    font-size: 1.125rem;
+  }
+
+  .bannerActions {
+    flex-direction: row;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .bannerContent {
+    padding: 28px;
+  }
+
+  .bannerTitle {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .bannerText {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .bannerActions {
+    flex-direction: row;
+  }
+}
+
+/* Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .bannerCard {
+    border-radius: 12px;
+  }
+
+  .bannerContent {
+    padding: 24px;
+  }
+
+  .bannerBadge {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+    margin-bottom: 12px;
+  }
+
+  .bannerTitle {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  .bannerText {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .bannerActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bannerBtnPrimary,
+  .bannerBtnSecondary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .bannerCard {
+    border-radius: 10px;
+  }
+
+  .bannerContent {
+    padding: 20px;
+  }
+
+  .bannerBadge {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    margin-bottom: 10px;
+  }
+
+  .bannerTitle {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .bannerText {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .bannerActions {
+    gap: 8px;
+  }
+
+  .bannerBtnPrimary,
+  .bannerBtnSecondary {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .bannerContent {
+    padding: 16px;
+  }
+
+  .bannerTitle {
+    font-size: 1rem;
+  }
+
+  .bannerText {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+
+  .bannerBtnPrimary,
+  .bannerBtnSecondary {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}

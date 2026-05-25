@@ -1,0 +1,276 @@
+/* Edit Profil Form */
+
+.editProfilContainer {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.editProfilTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #023d2d;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Alerts */
+.successAlert {
+  background-color: #ecfdf5;
+  color: #065f46;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #a7f3d0;
+}
+
+.errorAlert {
+  background-color: #fef2f2;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #fecaca;
+}
+
+/* Avatar Section */
+.avatarEditSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.avatarPreviewWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.avatarPreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #023d2d;
+}
+
+.avatarEditBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #023d2d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid white;
+  transition: all 0.2s ease;
+}
+
+.avatarEditBtn:hover {
+  background-color: #015c44;
+  transform: scale(1.1);
+}
+
+.selectedFileInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.clearFileBtn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.clearFileBtn:hover {
+  color: #dc2626;
+}
+
+.avatarHint {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+/* Form */
+.editProfilForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formLabel svg {
+  color: #023d2d;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #023d2d;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(2, 61, 45, 0.1);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #9ca3af;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Action Buttons */
+.formActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.cancelBtn,
+.saveBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.saveBtn {
+  background-color: #023d2d;
+  color: white;
+  border: 2px solid #023d2d;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background-color: #015c44;
+  border-color: #015c44;
+}
+
+.saveBtn:disabled,
+.cancelBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .editProfilContainer {
+    padding: 1.5rem;
+    margin: 0 1rem;
+    border-radius: 12px;
+  }
+
+  .editProfilTitle {
+    font-size: 1.25rem;
+  }
+
+  .avatarPreviewWrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatarPreview {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatarEditBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .formInput,
+  .formTextarea {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .formActions {
+    flex-direction: column-reverse;
+  }
+
+  .cancelBtn,
+  .saveBtn {
+    padding: 12px 16px;
+  }
+}

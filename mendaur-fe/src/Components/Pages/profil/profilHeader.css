@@ -1,0 +1,748 @@
+.profilHeader {
+  margin-bottom: 1.5rem;
+}
+
+/* Main Profile Card */
+.profilCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  gap: 1.5rem;
+}
+
+/* Left Section */
+.profilLeftSection {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+/* Avatar */
+.avatarWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profilAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary-dark, #023d2d);
+}
+
+.uploadAvatarBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary, #4CAF50);
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.uploadAvatarBtn:hover {
+  background-color: var(--color-primary-dark, #023d2d);
+  transform: scale(1.1);
+}
+
+/* Profile Details */
+.profilDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-height: 70px;
+}
+
+.profilName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-dark, #111827);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.profilEmail {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Level Badge */
+.levelBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--color-primary-dark, #2E7D32);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+.levelBadge svg {
+  color: #FFC107;
+}
+
+/* Badge Title Selector */
+.badgeTitleSelector {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.badgeTitleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+  border: 1px solid #FFD54F;
+  border-radius: 20px;
+  padding: 0.4rem 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #795548;
+}
+
+.badgeTitleBtn:hover {
+  background: linear-gradient(135deg, #FFECB3 0%, #FFE082 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.25);
+}
+
+.badgeTitleBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.badgeTitleIcon {
+  font-size: 0.9rem;
+}
+
+.badgeTitleText {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badgeTitleBtn svg {
+  transition: transform 0.2s ease;
+  color: #795548;
+}
+
+.badgeTitleBtn svg.rotated {
+  transform: rotate(180deg);
+}
+
+/* Badge Dropdown */
+.badgeDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  z-index: 100;
+  min-width: 220px;
+  max-width: 280px;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badgeDropdownHeader {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  margin-bottom: 0.25rem;
+}
+
+.badgeDropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.badgeDropdownItem:hover {
+  background-color: #f3f4f6;
+}
+
+.badgeDropdownItem.selected {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.badgeItemIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.badgeItemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.badgeItemName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badgeItemReward {
+  font-size: 0.7rem;
+  color: #FFB800;
+  font-weight: 600;
+}
+
+.checkMark {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Right Section: Points */
+.profilRightSection {
+  flex-shrink: 0;
+}
+
+.pointsCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  color: white;
+}
+
+.pointsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.pointsIcon svg {
+  color: #FFD700;
+}
+
+.pointsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.pointsLabel {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pointsValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+/* Success Message */
+.uploadSuccessMessage {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Legacy Styles (keeping for backwards compatibility) */
+.profilInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profilBadge {
+  background-color: var(--color-gray-light);
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: flex;
+  margin-top: 20px;
+}
+
+.badgeSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.badgeSelector h4 {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.badgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.badgeOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid var(--border-gray-light);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--color-primary-dark);
+}
+
+.badgeOption:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badgeOption.selected {
+  border-color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.badgeIconMini {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.badgeOptionInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.badgeOptionName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+}
+
+.badgeOptionReward {
+  font-size: 0.75rem;
+  color: #FFB800;
+  font-weight: 700;
+}
+
+/* Avatar Upload Styles */
+.avatarWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.uploadAvatarBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.uploadAvatarBtn:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.uploadAvatarBtn:active {
+  transform: scale(0.95);
+}
+
+.uploadSuccessMessage {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Upload Modal Styles */
+.uploadModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.uploadModal {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.uploadModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-gray-light);
+}
+
+.uploadModalHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.closeBtn:hover:not(:disabled) {
+  color: var(--color-primary-dark);
+}
+
+.closeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uploadModalContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.previewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 150px;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.fileInputWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.fileInputLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  border: 2px dashed var(--color-primary);
+  border-radius: 8px;
+  background-color: rgba(76, 175, 80, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.fileInputLabel:hover {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-color: var(--color-primary-dark);
+}
+
+.errorMessage {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid #c62828;
+  font-size: 0.9rem;
+}
+
+.uploadInfo {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.uploadModalFooter {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-gray-light);
+  justify-content: flex-end;
+}
+
+.cancelBtn,
+.uploadBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.cancelBtn {
+  background-color: var(--color-gray-light);
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-gray-light);
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background-color: #e0e0e0;
+  border-color: #d0d0d0;
+}
+
+.uploadBtn {
+  background-color: var(--color-primary);
+  color: white;
+  border: 2px solid var(--color-primary);
+}
+
+.uploadBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.uploadBtn:disabled,
+.cancelBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.uploadBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profilCard {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .profilLeftSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profilDetails {
+    align-items: center;
+  }
+
+  .profilRightSection {
+    width: 100%;
+  }
+
+  .pointsCard {
+    justify-content: center;
+    padding: 0.875rem 1rem;
+  }
+
+  .badgeDropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .profilCard {
+    padding: 1rem;
+  }
+
+  .profilAvatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .uploadAvatarBtn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .profilName {
+    font-size: 1.1rem;
+  }
+
+  .pointsCard {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .pointsIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pointsValue {
+    font-size: 1.1rem;
+  }
+
+  .badgeTitleBtn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+}

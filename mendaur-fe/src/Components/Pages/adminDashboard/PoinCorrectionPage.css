@@ -1,0 +1,406 @@
+/**
+ * Poin Correction Page Styles
+ */
+
+.poin-correction-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.poin-correction-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.poin-correction-card h2 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.poin-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.poin-error svg {
+  color: #dc2626;
+  width: 48px;
+  height: 48px;
+}
+
+.poin-error p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.poin-error a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.poin-error a:hover {
+  background: #2563eb;
+}
+
+.poin-error-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  color: #991b1b;
+}
+
+.poin-error-message svg {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #333;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.correction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-group small {
+  font-size: 12px;
+  color: #999;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.current-poin-info {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #166534;
+  font-weight: 600;
+}
+
+.poin-difference {
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.btn-submit {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.correction-history {
+  min-height: 200px;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.loading-state .spinner {
+  width: 40px;
+  height: 40px;
+  color: #3b82f6;
+}
+
+.loading-state p {
+  color: #666;
+  font-size: 16px;
+}
+
+.corrections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.correction-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.correction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.correction-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.type-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-correction {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-reversal {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.badge-fraud_prevention {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-system_fix {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.correction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  min-width: 120px;
+  font-weight: 600;
+  color: #666;
+}
+
+.detail-row .value {
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+}
+
+.detail-row .value.positive {
+  color: #059669;
+  font-weight: 600;
+}
+
+.detail-row .value.negative {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.btn-reverse {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-reverse:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.btn-reverse:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reversed-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .poin-correction-card {
+    padding: 20px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+  }
+
+  .detail-row .label {
+    min-width: auto;
+  }
+
+  .tabs {
+    gap: 0;
+  }
+
+  .tab-button {
+    flex: 1;
+    text-align: center;
+  }
+}

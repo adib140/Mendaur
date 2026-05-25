@@ -1,0 +1,67 @@
+:root {
+  /* Warna Utama Mendaur */
+  --color-primary: #047857;              /* Hijau utama */
+  
+  --color-primary-dark: #123524; /* Hijau gelap baru */
+  --color-font-primary: ;
+  --color-white: rgba(255, 255, 255, 0.9);
+
+  --color-primary-dark-transparent: rgba(2, 61, 45, 0.95); /* Versi transparan */
+  --color-primary-light: rgba(4, 120, 87, 0.2); /* Versi transparan */
+  
+
+  --color-accent: #facc15;
+  --color-coin: #FFD700;
+  --font-color-accent: #1f2937;
+  
+  
+  --color-orange: #fbbf24;             /* Kuning aksen */
+  --color-accent-dark: #b45309;          /* Kuning aksen gel*/
+
+  --destructive: #a41d1d;               /* Merah untuk tindakan destruktif */
+
+
+  /* Warna pastel untuk kategori */
+  --color-green-soft: #d1fae5; /* hijau */
+  --color-yellow-soft: #fef3c7; /* hijau */
+  --color-blue-soft: #e0f2fe; /* hijau */
+  --color-purple-soft: #ede9fe; /* hijau */
+  --color-red-soft: #fce7f3; /* hijau */
+
+
+  /* Warna Netral */
+  --color-gray: #6b7280;
+  --color-gray-light: #f3f4f6;
+  --color-gray-dark: #374151;
+
+  /* Font & Radius */
+  --font-base: "Work Sans", sans-serif;
+
+  --font-desc : 0.75rem;
+  --font-md : 1.125rem;
+  --font-title : 1.75rem;
+  --font-sm : 0.875rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  /* border */
+  --border-gray-light: #e3e5e7;
+  --border-gray-dark: #a7a7a7;
+
+  --card: #ffffff;
+  --muted: var(--color-gray-light);
+  --chart-1: var(--color-accent-dark);
+  --chart-2: #92400e;
+  --chart-3: #78350f;
+
+  /* Responsive Breakpoints: Mobile Small 320-480px, Mobile Large 481-768px, Tablet 769-1024px, Desktop 1025px+ */
+}
+
+
+

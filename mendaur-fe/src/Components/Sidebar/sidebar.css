@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Sidebar container */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}
+
+/* Wrapper untuk bagian atas sidebar */
+.sidebarTop {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /*jarak antara profileSection dan navSection */
+}
+
+
+/* Profile section */
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.profileImage {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+.profileImageLink {
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.profileImageLink:hover {
+  transform: scale(1.05);
+}
+
+.profileData {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+
+.profileName {
+  font-weight: 600;
+  font-size: var(--font-md);
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+
+.profileBadge {
+  background-color: var(--color-primary-dark);
+  color: var(--card);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--font-sm);
+}
+
+
+.profilePoints {
+  margin-top: 6px;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--color-primary-dark);
+  background-color: var(--color-coin);
+  padding: 8px 8px;
+  border-radius: 4px;
+  text-align: center;
+  width: fit-content;
+}
+
+
+
+/* Navigation section */
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* jarak antar item navigasi */
+
+
+}
+
+.navTitle {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  margin-bottom: 1rem;
+}
+
+/* Navigation item */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #6b7280;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #111827;
+}
+
+.navItem.active {
+  background-color: #123524;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Icon styling */
+.navIcon {
+  font-size: 1.25rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label styling */
+.navLabel {
+  font-size: 0.875rem;
+}
+
+/* Badge for "Hot" items */
+.navBadge {
+  margin-left: auto;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* Logout section */
+.logoutSection {
+  margin-top: auto; /*ini yang mendorong ke bawah */
+  padding-top: 16px;
+  border-top: 2px solid rgba(4, 120, 87, 0.2);
+}
+
+.logoutSection .navList li {
+  margin-bottom: 0.5rem; /* lebih rapat dari nav utama */
+}
+
+.badgeIconMini {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  object-fit: contain;
+}

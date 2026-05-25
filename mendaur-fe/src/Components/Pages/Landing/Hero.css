@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* hero section */
+.hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hero container */
+.heroContainer {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* badge */
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.badgeIcon {
+  width: 20px;
+  height: 20px;
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.badgeText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #22c55e;
+}
+
+/* hero title */
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0;
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.heroTitleAccent {
+  color: #f59e0b;
+  display: block;
+}
+
+/* hero subtitle */
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* buttons group */
+.heroButtonsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* button styles */
+.btnMulai,
+.btnInfo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.btnMulai {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.btnMulai:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+}
+
+.btnMulai:active {
+  transform: translateY(0);
+}
+
+.btnInfo {
+  background: white;
+  color: #22c55e;
+  border: 1px solid #22c55e;
+}
+
+.btnInfo:hover {
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.btnIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* stats card */
+.statsCard {
+  background: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.statsCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* stats item */
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.statsNumber {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #22c55e;
+  line-height: 1;
+}
+
+.statsHighlight {
+  color: #f59e0b;
+}
+
+.statsGreen {
+  color: #10b981;
+}
+
+.statsLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* responsive tablet */
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+    min-height: auto;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroButtonsGroup {
+    flex-direction: row;
+  }
+
+  .btnMulai,
+  .btnInfo {
+    min-width: auto;
+  }
+
+  .statsCard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+/* responsive desktop */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  .heroTitle {
+    font-size: 5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+  }
+
+  .statsCard {
+    padding: 2.5rem;
+  }
+}

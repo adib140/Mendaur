@@ -1,0 +1,649 @@
+/* Container & Header */
+.riwayatContainer {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  width: 100%;
+}
+
+.riwayatHeader .headerTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.riwayatHeader h1 {
+  font-size: var(--font-title);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary-dark);
+}
+
+.riwayatHeader p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.riwayatHeader .refreshButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  flex-shrink: 0;
+}
+
+.riwayatHeader .refreshButton:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.riwayatHeader .refreshButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.riwayatHeader .refreshButton .spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Stats Info */
+.riwayatStatsInfo {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.riwayatStatsInfo .statItem {
+  flex: 1;
+  min-width: 80px;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.riwayatStatsInfo .statLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.riwayatStatsInfo .statValue {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+/* Search & Status Filter */
+.searchAndStatus {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  flex: 1;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchBox:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 100%;
+  padding-left: 1.75rem;
+}
+
+.searchBox input::placeholder {
+  color: #9ca3af;
+}
+
+.searchIcon {
+  color: #6b7280;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.sortButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sortButton:hover {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.sortButton:active {
+  background-color: #dcfce7;
+}
+
+.sortButton svg {
+  color: #10b981;
+}
+
+.statusDropdown {
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.statusDropdown:focus {
+  outline: none;
+  border-color: #10b981;
+}
+
+/* Kategori Filter */
+.riwayatFilterBar {
+  margin: 1rem 0;
+}
+
+.filterKategoriStatus {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filterStatusItem {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.filterStatusItem:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.filterStatusItem.active {
+  border-color: #065f46;
+  background-color: #ecfdf5;
+}
+
+.statusIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.statusIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.statusLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.statusIcon.green { color: #065f46; }
+.statusIcon.red { color: #991b1b; }
+.statusIcon.gray { color: #374151; }
+.statusIcon.blue { color: #0369a1; }
+.statusIcon.orange { color: #92400e; }
+
+/* Card Wrapper */
+.riwayatCardWrapper {
+  margin-top: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-height: 600px;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.riwayatCardWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.riwayatCardWrapper::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.riwayatCardWrapper::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+.riwayatCardWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+/* Card List */
+.riwayatCardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 200px;
+}
+
+.riwayatCard {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.riwayatCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Card Content */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cardSub {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.cardPoint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cardPoint.masuk { color: #065f46; }
+.cardPoint.keluar { color: #991b1b; }
+
+.pointIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Card Detail */
+.cardDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.cardInfoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardNote {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.cardNote.tambah {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.cardNote.kurang {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* Metadata & Status */
+.cardMeta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metaIcon {
+  width: 12px;
+  height: 12px;
+  color: #6b7280;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Loading & Error States */
+.loadingState,
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.loadingState .spinner {
+  animation: spin 1s linear infinite;
+  color: #065f46;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.errorState {
+  color: #991b1b;
+}
+
+.errorState button,
+.emptyState button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #065f46;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.errorState button:hover,
+.emptyState button:hover {
+  background-color: #047857;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Info Elements */
+.cardInfo {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.adminNote {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #991b1b;
+  background-color: #fef2f2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.claimInstructions {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-left: 3px solid #047857;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.claimInstructions .claimIcon {
+  color: #047857;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.claimInstructions p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #065f46;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cardInfo.success {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #047857;
+  background-color: #d1fae5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.cardNote.kurang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.cardNote.tambah {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive */
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .riwayatContainer {
+    padding: 2rem;
+    max-width: 1200px;
+  }
+
+  .riwayatHeader h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .riwayatContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .riwayatHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .filterKategoriStatus {
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .riwayatContainer {
+    padding: 1rem 0.75rem;
+  }
+
+  .riwayatHeader h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .riwayatHeader p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .searchAndStatus {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .cardDetail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterKategoriStatus {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filterStatusItem {
+    width: 100%;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .riwayatContainer {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .riwayatHeader h1 {
+    font-size: 1.2rem;
+  }
+
+  .riwayatHeader p {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .searchBox {
+    padding: 8px 10px;
+  }
+
+  .searchBox input {
+    font-size: 0.8rem;
+  }
+
+  .statusDropdown {
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .riwayatContainer {
+    padding: 0.5rem;
+  }
+
+  .riwayatHeader h1 {
+    font-size: 1.1rem;
+  }
+}

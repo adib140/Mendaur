@@ -1,0 +1,57 @@
+.kategoriContainer {
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.kategoriContainer p{
+    margin-bottom: 2rem;
+    font-size: var(--font-title);
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.kategoriWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem; /* sedikit lebih rapat */
+}
+
+
+.kategoriCard {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  height: 80px; /* lebih pendek */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.kategoriCard:hover {
+  transform: scale(1.02);
+}
+
+.kategoriCard.active {
+  background-color: #ecfdf5;
+  border-color: #10b981;
+}
+
+.kategoriIcon {
+  font-size: 1.25rem; /* lebih kecil */
+  margin-bottom: 4px;
+}
+
+.kategoriLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+}

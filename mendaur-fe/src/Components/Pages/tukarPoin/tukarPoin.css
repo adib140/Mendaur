@@ -1,0 +1,1049 @@
+/* CONTAINER & HEADER */
+.tukarPoinContainer {
+  padding: 2rem;
+  /* background: linear-gradient(180deg, #f0fdf4 0%, #f9fafb 30%); */
+  color: var(--color-primary-dark);
+  min-height: 100vh;
+}
+
+.tukarPoinHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.tukarPoinHeader .pageSubtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* BANNER POIN - Tema dari banner home */
+.userPointsSection {
+  background: #123524;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.userPointsCard {
+  position: relative;
+  z-index: 1;
+}
+
+.pointsLabelRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.userPointsCard .pointsLabel {
+  color: #facc15;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pointsValueWrapper {
+  flex: 1;
+}
+
+.userPointsCard .pointsValue {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #facc15;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.userPointsCard .pointsNote {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+}
+
+.pointsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* MENU PENUKARAN SECTION */
+.menuTukarPoin {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.menuTukarPoin .menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.menuHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.sortDropdown {
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sortDropdown:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Grid untuk kartu penukaran */
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .menuGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* VISUAL OPSI MENU PENUKARAN */
+.menuCard {
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.menuCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #123524, #1e5631);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover: naik sedikit + border lebih tegas */
+.menuCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #123524;
+  transform: translateY(-4px);
+}
+
+.menuCard:hover::before {
+  opacity: 1;
+}
+
+/* Card Content */
+.menuCardContent {
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.menuIcon {
+  font-size: 4rem;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.menuTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.menuPoin {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.menuCard.active {
+  background: linear-gradient(135deg, #123524 0%, #1e5631 100%);
+  border: 2px solid #123524;
+  box-shadow: 0 10px 30px rgba(18, 53, 36, 0.3);
+  transform: translateY(-4px);
+}
+
+.menuCard.active .menuTitle {
+  color: #ffffff;
+}
+
+.menuCard.active .menuPoin {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menuCard.active::before {
+  opacity: 1;
+  background: linear-gradient(90deg, #facc15, #eab308);
+}
+
+/* Produk Ramah Lingkungan  => Aktif */
+.produkPilihanSection {
+  margin-top: 0;
+  padding: 2rem;
+  /* background: linear-gradient(180deg, #065f46 0%, #064e3b 100%); */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.produkPilihanTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.produkPilihanTitle::before {
+  font-size: 1.5rem;
+}
+
+/* FILTER BAR PRODUCT */
+.filterBarProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.searchBarProduct {
+  display: flex;
+  width: 100%;
+}
+
+.searchInputProduct {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid #023d2d;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.searchInputProduct:focus {
+  outline: none;
+  border-color: #023d2d;
+  box-shadow: 0 0 0 3px rgba(2, 61, 45, 0.1);
+  transform: translateY(-1px);
+}
+
+.searchInputProduct::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.categoryFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.categoryButton {
+  padding: 0.625rem 1.25rem;
+  border: 2px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categoryButton:hover {
+  border-color: #10b981;
+  color: #047857;
+  transform: translateY(-1px);
+}
+
+.categoryButton.active {
+  background-color: #047857;
+  border-color: #047857;
+  color: #ffffff;
+}
+
+.productCount {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+/* INFO SECTION */
+.infoSection {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.infoSection h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.infoSection p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* CASH WITHDRAWAL MODAL */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.9) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+.cashModalContent {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 24px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.cashModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+  border-radius: 24px 24px 0 0;
+  position: relative;
+}
+
+.cashModalHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #34d399, #10b981);
+}
+
+.cashModalHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.closeModalBtn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.625rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeModalBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
+}
+
+.cashModalBody {
+  padding: 2rem;
+}
+
+.withdrawInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.infoCard {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid #a7f3d0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+}
+
+.infoLabel {
+  font-size: 0.8rem;
+  color: #059669;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoValue {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #065f46;
+}
+
+.withdrawForm {
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #f9fafb;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  background: white;
+}
+
+.formGroup input::placeholder {
+  color: #9ca3af;
+}
+
+.formGroup input.input-error {
+  border-color: #ef4444;
+  background: #fef2f2;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-left: 4px solid #ef4444;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.conversionResult {
+  margin: 1.5rem 0;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resultCard {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  padding: 1.75rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.resultCard::before {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.15;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.resultLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.resultValue {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.withdrawNote {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.withdrawNote svg {
+  flex-shrink: 0;
+  color: #3b82f6;
+  margin-top: 0.125rem;
+}
+
+.withdrawNote p {
+  margin: 0 0 0.625rem 0;
+  font-weight: 700;
+  color: #1e40af;
+  font-size: 0.95rem;
+}
+
+.withdrawNote ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #1e3a8a;
+}
+
+.withdrawNote li {
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
+  line-height: 1.6;
+}
+
+.cashModalActions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem 2rem;
+  background: white;
+  border-radius: 0 0 24px 24px;
+}
+
+.btnCancel,
+.btnSubmit {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnCancel {
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+}
+
+.btnCancel:hover:not(:disabled) {
+  background: #e5e7eb;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.btnSubmit {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+}
+
+.btnSubmit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45);
+}
+
+.btnSubmit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btnSubmit:disabled,
+.btnCancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .tukarPoinContainer {
+    padding: 1rem;
+  }
+
+  .tukarPoinHeader .pageTitle {
+    font-size: 2rem;
+  }
+
+  /* Saldo Poin Card Responsive */
+  .userPointsSection {
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+  }
+
+  .userPointsSection::before {
+    width: 200px;
+    height: 200px;
+    top: -30%;
+    right: -15%;
+  }
+
+  .userPointsSection::after {
+    width: 150px;
+    height: 150px;
+    bottom: -20%;
+    left: -5%;
+  }
+
+  .userPointsCard .pointsLabel {
+    font-size: 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .userPointsCard .pointsValue {
+    font-size: 2.25rem;
+  }
+
+  .userPointsCard .pointsNote {
+    font-size: 0.8rem;
+  }
+
+  .menuTukarPoin {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .menuHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .menuHeader h2 {
+    font-size: 1.25rem;
+  }
+
+  .pointsRow {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .pointsActionWrapper {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .tukarButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pointsExpiry {
+    text-align: left;
+    width: 100%;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .withdrawInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .cashModalHeader {
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .cashModalHeader h3 {
+    font-size: 1.25rem;
+  }
+
+  .cashModalBody {
+    padding: 1.5rem;
+  }
+
+  .cashModalActions {
+    flex-direction: column-reverse;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .resultValue {
+    font-size: 1.75rem;
+  }
+
+  .produkPilihanSection {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .produkPilihanTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tukarPoinHeader .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .userPointsSection {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .userPointsCard .pointsValue {
+    font-size: 1.875rem;
+  }
+
+  .menuTukarPoin {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .menuCardContent {
+    padding: 1.5rem 1rem;
+  }
+
+  .menuIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .menuTitle {
+    font-size: 1rem;
+  }
+
+  .menuPoin {
+    font-size: 0.85rem;
+  }
+
+  .tukarButton {
+    font-size: 0.85rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .pointsExpiry {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .cashModalContent {
+    border-radius: 20px;
+    margin: 0.5rem;
+  }
+
+  .cashModalHeader {
+    padding: 1.25rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .cashModalHeader h3 {
+    font-size: 1.125rem;
+  }
+
+  .infoCard {
+    padding: 1rem;
+  }
+
+  .infoLabel {
+    font-size: 0.75rem;
+  }
+
+  .infoValue {
+    font-size: 1.125rem;
+  }
+
+  .resultCard {
+    padding: 1.25rem;
+  }
+
+  .resultValue {
+    font-size: 1.5rem;
+  }
+
+  .formGroup input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .withdrawNote {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .withdrawNote p {
+    font-size: 0.875rem;
+  }
+
+  .withdrawNote li {
+    font-size: 0.8rem;
+  }
+
+  .btnCancel,
+  .btnSubmit {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .produkPilihanSection {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .produkPilihanTitle {
+    font-size: 1.125rem;
+  }
+
+  .filterBarProduct {
+    padding: 1rem;
+  }
+}
+
+/* PRODUCT REDEMPTION MODAL */
+.redeemProductInfo {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.redeemProductImage {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.redeemProductImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.redeemProductImage:hover img {
+  transform: scale(1.05);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  background: #f3f4f6;
+}
+
+.redeemProductDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.redeemProductDetails h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.productDesc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productMeta {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.productStock,
+.productCategory {
+  font-size: 0.8rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.productStock {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+}
+
+.productStock::before {
+  content: '📦';
+  font-size: 0.75rem;
+}
+
+.productCategory {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1e40af;
+}
+
+.productCategory::before {
+  content: '🏷️';
+  font-size: 0.75rem;
+}
+
+/* Responsive for Product Modal */
+@media screen and (max-width: 480px) {
+  .redeemProductInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .redeemProductImage {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .productMeta {
+    justify-content: center;
+  }
+  
+  .redeemProductDetails h4 {
+    font-size: 1.125rem;
+  }
+}

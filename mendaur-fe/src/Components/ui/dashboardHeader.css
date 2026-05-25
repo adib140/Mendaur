@@ -1,0 +1,280 @@
+/* Header */
+.dashboardHeader {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 20;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Title */
+.headerTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.headerSubtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive Title */
+.desktopTitle {
+  display: none;
+}
+
+.mobileTitle {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .desktopTitle {
+    display: block;
+  }
+
+  .mobileTitle {
+    display: none;
+  }
+}
+
+/* Icon Buttons */
+.iconButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #374151;
+}
+
+.iconButton:hover .icon {
+  color: #111827;
+  transform: scale(1.1);
+}
+
+.iconButton:hover {
+  background-color: #f3f4f6;
+}
+
+.iconButton.logout-button:hover .icon {
+  color: #dc2626;
+}
+
+/* Search Modal */
+.searchModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6rem;
+  z-index: 50;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.searchModalContent {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+}
+
+.searchIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.searchSubmitBtn {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchSubmitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.searchSubmitBtn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboardHeader {
+    padding: 1rem 1.25rem;
+  }
+
+  .headerLeft,
+  .headerRight {
+    gap: 1rem;
+  }
+
+  .headerTitle {
+    font-size: 1.1rem;
+  }
+
+  .headerSubtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    padding: 0.75rem 1rem;
+  }
+
+  .headerLeft,
+  .headerRight {
+    gap: 0.75rem;
+  }
+
+  .headerTitle {
+    font-size: 1rem;
+  }
+
+  .headerSubtitle {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .dashboardHeader {
+    padding: 0.625rem 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .headerLeft {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .headerRight {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .headerTitle {
+    font-size: 0.95rem;
+  }
+
+  .headerSubtitle {
+    font-size: 0.7rem;
+  }
+
+  .searchToggleBtn {
+    padding: 0.4rem;
+  }
+
+  .notificationBtn {
+    padding: 0.4rem;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .dashboardHeader {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .headerTitle {
+    font-size: 0.85rem;
+  }
+
+  .headerSubtitle {
+    font-size: 0.65rem;
+  }
+
+  .headerRight {
+    gap: 0.4rem;
+  }
+}

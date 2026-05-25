@@ -1,0 +1,42 @@
+.hero {
+    margin-top: 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+/* Container umum untuk semua box */
+.box-siapakami,
+.box-kegiatan,
+.box-capaian {
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect opsional */
+.box-siapakami:hover,
+.box-kegiatan:hover,
+.box-capaian:hover {
+  transform: translateY(-4px);
+}
+
+/* Heading style */
+.siapaKami,
+.kegiatan,
+.capaian {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Placeholder style */
+.placeholder {
+  font-size: 1rem;
+  color: #7f8c8d;
+  text-align: center;
+  display: block;
+}

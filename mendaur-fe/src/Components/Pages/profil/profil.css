@@ -1,0 +1,190 @@
+.profilPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.profilContentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pastikan tabContent fleksibel */
+.tabContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* TabContentWrapper isi penuh */
+.tabContentWrapper {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+.editButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* konten ada dipojok kanan */
+}
+
+.editButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  color: #023d2d;
+  border: 2px solid #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.editButton:hover {
+  background-color: #023d2d;
+  color: white;
+  border-color: #023d2d;
+}
+
+.editButton.cancelMode {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.editButton.cancelMode:hover {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+
+.tabContent {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.tabContentWrapper {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tabContentWrapper {
+    padding: 0 1rem;
+  }
+
+  .achievementList {
+    gap: 1rem;
+  }
+}
+
+/* Responsive */
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .profilPage {
+    padding: 2rem;
+    gap: 36px;
+    max-width: 1200px;
+  }
+
+  .profilContentRow {
+    gap: 2rem;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .profilPage {
+    padding: 1.5rem;
+    gap: 28px;
+  }
+
+  .profilContentRow {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .tabContentWrapper {
+    padding: 0 1.25rem;
+  }
+}
+
+/* Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  .profilPage {
+    padding: 1rem;
+    gap: 24px;
+  }
+
+  .profilContentRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tabContentWrapper {
+    padding: 0 1rem;
+  }
+
+  .editButton {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  .profilPage {
+    padding: 0.75rem;
+    gap: 20px;
+  }
+
+  .profilContentRow {
+    gap: 0.75rem;
+  }
+
+  .tabContentWrapper {
+    padding: 0 0.75rem;
+  }
+
+  .editButton {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+  }
+}
+
+/* Extra Small (< 360px) */
+@media (max-width: 360px) {
+  .profilPage {
+    padding: 0.5rem;
+    gap: 16px;
+  }
+
+  .tabContentWrapper {
+    padding: 0 0.5rem;
+  }
+
+  .editButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -37,24 +37,6 @@ Buat file `.env.local` di root folder:
 VITE_API_URL=http://127.0.0.1:8000/api
 ```
 
-## API Configuration
-
-| Environment | Base URL |
-|-------------|----------|
-| Development | `http://127.0.0.1:8000/api` |
-| Production  | `https://api.mendaur.id/api` |
-
-## Test Accounts
-
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | admin@mendaur.id | password123 |
-| Superadmin | superadmin@mendaur.id | password123 |
-| Demo | demo@mendaur.id | demo123 |
-| Nasabah | rina@gmail.com | password123 |
-
-> **Note:** Leaderboard hanya menampilkan nasabah (role_id=1). Admin dan Superadmin tidak muncul di leaderboard.
-
 ## Available Scripts
 
 ```bash
@@ -77,7 +59,3 @@ src/
 ├── utils/              # Utility functions
 └── main.jsx            # Entry point
 ```
-
-## License
-
-Private - All Rights Reserved
